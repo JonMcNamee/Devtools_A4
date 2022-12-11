@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -67,7 +67,7 @@ namespace Lab5
 
                 if (attemptCount == 3)
                 {
-                    MessageBox("3 attempts to login\nAccount locked - closing program", PROGRAMMER);
+                    MessageBox.Show("3 attempts to login\nAccount locked - closing program", PROGRAMMER);
                     this.Close();
                 }
                 else
@@ -125,7 +125,7 @@ namespace Lab5
                         grpText.Show();
                         txtString1.Focus();
                         grpStats.Hide();
-                        
+                       break;
                     
 
                 case false:
@@ -172,7 +172,7 @@ namespace Lab5
          * Out: Boolean */
         private bool CheckInput()
         {
-            bool input
+            bool input;
             if (txtString1.Text != "" && txtString2.Text != "")
             {
                 input = true;
@@ -234,7 +234,7 @@ namespace Lab5
             Random rand = new Random(733);
 
             // adds the random numbers to the listbox
-            for (int i = 0; i < nudNumber.Value;)
+            for (int i = 0; i < nudNumber.Value; i++)
             {
                 lstNumbers.Items.Add(rand.Next(MIN, MAX + 1));
             }
